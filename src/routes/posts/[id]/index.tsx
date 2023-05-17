@@ -1,6 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { routeLoader$, StaticGenerateHandler } from "@builder.io/qwik-city";
 
+
+
 export const usePost = routeLoader$(async(requestEvent)=>{
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${requestEvent.params.id}`,{
         method:"GET"
